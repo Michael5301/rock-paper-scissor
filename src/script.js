@@ -1,12 +1,3 @@
-/*  HUmbergermenu */
-
-//bring icons by ids
-//bring icons div by id, this is where we listen for click
-//bring menu by id
-// onclick toggle classlist on btn1, btn2 and menu.
-
-// let computerChoice = document.getElementById(computerChoice);
-// let playermove = document.getElementById(playermove);
 
 const choices = ['rock', 'paper', 'scissor']
 const computerDisplay = document.getElementById('computerDisplay');
@@ -14,6 +5,10 @@ const playerDisplay = document.getElementById('playerDisplay');
 const resultsDisplay = document.getElementById('resultsDisplay');
 const resultsAgregate = document.getElementById('resultsAgregate');
 
+const playerScoreDisplay = document.getElementById('playerScoreDisplay');
+const computerScoreDisplay = document.getElementById('computerScoreDisplay');
+let playerScore = 0;
+let computerScore = 0;
 
 function play(playerChoice) {
 
@@ -21,25 +16,29 @@ function play(playerChoice) {
     let result = '';
 
     if (playerChoice === computerChoice) { result = 'Tie'; }
-
-    else if (playerChoice === 'rock' && computerChoice === 'paper') { result = 'You lost'; }
-    else if (playerChoice === 'rock' && computerChoice === 'scissor') { result = 'You won'; }
-    else if (playerChoice === 'paper' && computerChoice === 'rock') { result = 'You won'; }
-    else if (playerChoice === 'paper' && computerChoice === 'scissor') { result = 'You lost'; }
-    else if (playerChoice === 'scissor' && computerChoice === 'rock') { result = 'You won'; }
-    else if (playerChoice === 'scissor' && computerChoice === 'paper') { result = 'You won'; }
-
-    if (result === 'You lost') { resultsDisplay.style.color = 'red'; }
-    else if (result === 'Tie') { resultsDisplay.style.color = 'blue'; }
-    else { resultsDisplay.style.color = 'green'; }
+    else if (playerChoice === 'rock' && computerChoice === 'paper') { result = 'You lose'; }
+    else if (playerChoice === 'rock' && computerChoice === 'scissor') { result = 'You win'; }
+    else if (playerChoice === 'paper' && computerChoice === 'rock') { result = 'You win'; }
+    else if (playerChoice === 'paper' && computerChoice === 'scissor') { result = 'You lose'; }
+    else if (playerChoice === 'scissor' && computerChoice === 'rock') { result = 'You lose'; }
+    else if (playerChoice === 'scissor' && computerChoice === 'paper') { result = 'You win'; }
 
     // displaying results and choices
     computerDisplay.textContent = `Computer Choice: ${computerChoice}`;
     playerDisplay.textContent = `Player Choice: ${playerChoice}`;
     resultsDisplay.textContent = `Outcome: ${result}`;
 
-    // agregate result
+    // switch results, colors, scores
+    if (result === 'You lose') {
+        resultsDisplay.style.color = 'red';
+        computerScore++;
+        computerScoreDisplay.textContent = computerScore;
+    } else if (result === 'You win') {
+        resultsDisplay.style.color = 'green';
+        playerScore++;
+        playerScoreDisplay.textContent = computerScore;
+    } else { resultsDisplay.style.color = 'gray' }
 
 
-    console.log(result);
+
 }

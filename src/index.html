@@ -21,9 +21,10 @@
 <body class="">
     <!-- nav -->
     <nav class="grid place-content-center shadow-cyan-300 shadow-xl h-20 w-full">
-        <h1 class="text-2xl font-semibold text-teal-950">
+        <a href="https://rock-paper-scissor-spel.netlify.app/"
+            class="text-2xl font-semibold text-teal-950 cursor-pointer">
             Rock-Paper-Scissor Game
-        </h1>
+        </a>
     </nav>
 
     <main>
@@ -49,18 +50,21 @@
                 <!-- Displays -->
                 <div class="flex flex-col justify-center space-y-2 items-center p-4">
 
-                    <div class="border-1 border-cyan-800 w-full p-4">
-                        <div id="playerDisplay" class="font-semibold text-xl">
+                    <!-- outcome -->
+                    <div class=" border-cyan-800 p-4 w-[80%] shadow-inner grid place-content-center">
+                        <div id="playerDisplay" class="font-semibold">
                             Player: Select a move
                         </div>
-                        <div id="computerDisplay" class="font-semibold text-xl">
+                        <div id="computerDisplay" class="font-semibold">
                             Computer: Waiting...
                         </div>
-                        <div id="resultsDisplay" class="font-semibold text-2xl">Game result:_</div>
                     </div>
+                    <div id="resultsDisplay" class="font-semibold text-2xl">Game result:_</div>
 
-                    <div id="resultsAgregate" class="font-semibold text-4xl py-4">
-                            <div></div>
+                    <!-- scores -->
+                    <div class="font-semibold pt-4 shadow-inner text-xl px-4 mt-4">
+                        <div>Player Score: <span id="playerScoreDisplay" class="text-green-600 ">0</span></div>
+                        <div>Computer Score: <span id="computerScoreDisplay" class="text-red-600">0</span></div>
                     </div>
 
 
