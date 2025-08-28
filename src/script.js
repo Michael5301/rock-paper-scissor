@@ -36,7 +36,7 @@ function play(playerChoice) {
     } else if (result === 'You win') {
         resultsDisplay.style.color = 'green';
         playerScore++;
-        playerScoreDisplay.textContent = computerScore;
+        playerScoreDisplay.textContent = playerScore;
     } else { resultsDisplay.style.color = 'gray' }
 
 
