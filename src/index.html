@@ -23,17 +23,19 @@
         <!-- PAPER ROCK SCISSOR -->
         <div class="grid place-content-center h-[calc(100vh-128px)] w-full">
             
-            <div class="flex flex-col shadow py-8 bg-slate-700 rounded-xl">
+            <div class="flex flex-col shadow py-8 bg-slate-700 rounded-xl max-w-[300px]">
                 <h2 class="text-white text-xl px-4 pb-4 font-semibold">Choose your move</h2>
 
                 <!-- Buttons -->
-                <div class="flex justify-around items-center w-[400px] pb-[24px]">
-                    <button id="rock" onclick="play('Rock')" class="cursor-pointer">
-                        <img src="./images/rock-emoji.png" alt="" class="active:scale-105 hover:cursor-pointer" width="80"/>
-                    </button>
+                <div class="flex justify-center items-center pb-[24px]">
+                   
+
                     <button id="paper" onclick="play('Paper')" class="cursor-pointer">
                         <img src="./images/paper-emoji.png" width="80" alt="" class="active:scale-105 hover:cursor-pointer" />
                     </button>
+<button id="rock" onclick="play('Rock')" class="cursor-pointer">
+    <img src="./images/rock-emoji.png" alt="" class="active:scale-105 hover:cursor-pointer" width="80" />
+</button>
                     <button id="scissor" onclick="play('Scissor')" class="cursor-pointer">
                         <img src="./images/scissors-emoji.png" width="80" alt="" class="active:scale-105 hover:cursor-pointer" />
                     </button>
@@ -45,7 +47,7 @@
                 <div class="flex flex-col justify-center gap-2 items-center p-4 bg-gray-200">
 
                     <!-- outcome -->
-                    <div class=" p-4 w-[80%] grid text-start">
+                    <div class=" p-4 grid text-start">
 
                         <p id="playerDisplay" class="">
                             Player .. thinking ..
