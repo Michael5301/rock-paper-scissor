@@ -1,5 +1,5 @@
 
-const choices = ['rock', 'paper', 'scissor']
+const choices = ['Rock', 'Paper', 'Scissor']
 const computerDisplay = document.getElementById('computerDisplay');
 const playerDisplay = document.getElementById('playerDisplay');
 const resultsDisplay = document.getElementById('resultsDisplay');
@@ -16,12 +16,12 @@ function play(playerChoice) {
     let result = '';
 
     if (playerChoice === computerChoice) { result = 'Tie'; }
-    else if (playerChoice === 'rock' && computerChoice === 'paper') { result = 'You lose'; }
-    else if (playerChoice === 'rock' && computerChoice === 'scissor') { result = 'You win'; }
-    else if (playerChoice === 'paper' && computerChoice === 'rock') { result = 'You win'; }
-    else if (playerChoice === 'paper' && computerChoice === 'scissor') { result = 'You lose'; }
-    else if (playerChoice === 'scissor' && computerChoice === 'rock') { result = 'You lose'; }
-    else if (playerChoice === 'scissor' && computerChoice === 'paper') { result = 'You win'; }
+    else if (playerChoice === 'Rock' && computerChoice === 'Paper') { result = 'You lose'; }
+    else if (playerChoice === 'Rock' && computerChoice === 'Scissor') { result = 'You win'; }
+    else if (playerChoice === 'Paper' && computerChoice === 'Rock') { result = 'You win'; }
+    else if (playerChoice === 'Paper' && computerChoice === 'Scissor') { result = 'You lose'; }
+    else if (playerChoice === 'Scissor' && computerChoice === 'Rock') { result = 'You lose'; }
+    else if (playerChoice === 'Scissor' && computerChoice === 'Paper') { result = 'You win'; }
 
     // displaying results and choices
     computerDisplay.textContent = `Computer Choice: ${computerChoice}`;

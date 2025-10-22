@@ -1,1 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Bangers&family=Joti+One&family=Kablammo&display=swap');
 @import 'tailwindcss';
+
+html {
+    font-family: 'Joti' ;
+}
